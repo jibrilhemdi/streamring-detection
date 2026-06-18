@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\caption{Augmentation strategy ablation for CSP regularizer (mean $\pm$ std, $n{=}3$ runs). Best in \textbf{bold}.}
+\label{tab:augmentation}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Augmentation} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{MCC} \\
+\midrule
+\textbf{Feature Masking} & \textbf{0.893}$\pm$0.011 & \textbf{0.829}$\pm$0.010 & \textbf{0.912}$\pm$0.018 & \textbf{0.649}$\pm$0.013 \\
+Edge Dropout (10\%) & 0.860$\pm$0.011 & 0.821$\pm$0.007 & 0.886$\pm$0.008 & 0.610$\pm$0.025 \\
+Edge Dropout (20\%) & 0.852$\pm$0.016 & 0.810$\pm$0.016 & 0.877$\pm$0.016 & 0.579$\pm$0.043 \\
+Node Dropout (10\%) & 0.874$\pm$0.004 & 0.826$\pm$0.011 & 0.897$\pm$0.012 & 0.616$\pm$0.013 \\
+Subgraph Crop (80\%) & 0.873$\pm$0.023 & 0.817$\pm$0.003 & 0.898$\pm$0.030 & 0.621$\pm$0.024 \\
+Feat Mask + Edge Drop & 0.874$\pm$0.023 & 0.827$\pm$0.018 & 0.898$\pm$0.032 & 0.622$\pm$0.016 \\
+Feat Mask + Node Drop & 0.884$\pm$0.006 & 0.811$\pm$0.008 & 0.914$\pm$0.002 & 0.637$\pm$0.011 \\
+Identity (no aug) & 0.876$\pm$0.024 & 0.825$\pm$0.038 & 0.895$\pm$0.025 & 0.625$\pm$0.052 \\
+No CSP (supervised) & 0.870$\pm$0.010 & 0.808$\pm$0.018 & 0.900$\pm$0.011 & 0.612$\pm$0.027 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

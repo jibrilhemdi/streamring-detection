@@ -1,0 +1,20 @@
+{
+  "period": "dao_hack",
+  "total_fraud_rings": 32,
+  "ring_sizes": [
+    8,
+    7,
+    6,
+    6,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "largest_ring_size": 8,
+  "largest_ring_neighbors": 10,
+  "num_fraud_nodes": 211,
+  "num_total_nodes": 29094
+}

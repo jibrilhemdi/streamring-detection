@@ -1,0 +1,44 @@
+{
+  "throughput": 636.8,
+  "total_eval_edges": 49410,
+  "elapsed_seconds": 77.6,
+  "tier_distribution": {
+    "tier1_safe": 46312,
+    "tier2_suspicious": 1591,
+    "tier3_fraud": 1039,
+    "tier3_likely_fraud": 468
+  },
+  "filter_rates": {
+    "tier1": 93.73,
+    "tier1_2": 96.95
+  },
+  "latency": {
+    "tier1_p50": 0.069,
+    "tier1_p99": 0.285,
+    "tier2_p50": 19.426,
+    "tier2_p99": 26.331,
+    "tier3_p50": 8.014,
+    "tier3_p99": 15.456
+  },
+  "latency_targets": {
+    "tier1_met": true,
+    "tier2_met": true,
+    "tier3_met": true
+  },
+  "detections": 1039,
+  "true_positives": 985,
+  "false_positives": 54,
+  "precision": 94.8,
+  "confusion": {
+    "tp": 985,
+    "fp": 54,
+    "tn": 46239,
+    "fn": 2132
+  },
+  "tier1_threshold": 0.5215,
+  "counts": {
+    "tier1_edges": 49410,
+    "tier2_edges": 3098,
+    "tier3_edges": 1507
+  }
+}

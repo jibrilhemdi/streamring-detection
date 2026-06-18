@@ -1,0 +1,181 @@
+# Default StreamRing Configuration
+
+project:
+  name: streamring
+  seed: 42
+  device: cuda  # or cpu
+
+data:
+  # BigQuery source
+  bigquery_project: "bigquery-public-data"
+  billing_project: null  # Optional; defaults to GOOGLE_CLOUD_PROJECT or ADC project
+  bigquery_dataset: "crypto_ethereum_classic"
+  
+  # ethereum-etl provider  
+  etc_provider_uri: "https://www.ethercluster.com/etc"
+  
+  # Time periods (block ranges)
+  periods:
+    dao_hack:
+      start_block: 1917000
+      end_block: 1925000
+      description: "DAO Hack period (Jun 17-20, 2016)"
+    pre_dao:
+      start_block: 1800000
+      end_block: 1917000
+      description: "Pre-DAO normal operations"
+    post_fork:
+      start_block: 1925000
+      end_block: 2500000
+      description: "Post-fork ETC divergence"
+    attack_51_v1:
+      start_block: 7200000
+      end_block: 7300000
+      description: "First 51% attack (Jan 2019)"
+    attack_51_v2:
+      start_block: 10900000
+      end_block: 11000000
+      description: "Second 51% attack (Aug 2020)"
+    normal_ops:
+      start_block: 5000000
+      end_block: 6000000
+      description: "Normal operations (2018)"
+  
+  # Output paths
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  graph_dir: "data/graphs"
+  embedding_dir: "data/embeddings"
+
+graph:
+  # Sliding window for streaming
+  window_size_hours: 6
+  window_step_hours: 1
+  
+  # Node feature dimensions
+  node_feature_dim: 32
+  edge_feature_dim: 16
+  
+  # Graph construction
+  include_traces: true
+  include_token_transfers: true
+  min_tx_value_wei: 0  # Include all transactions
+
+subgraph_matching:
+  # IFASI configuration
+  max_pattern_size: 5
+  pattern_types:
+    - cycle_2
+    - cycle_3
+    - cycle_4
+    - fan_out_3
+    - fan_out_5
+    - fan_in_3
+    - fan_in_5
+    - chain_3
+    - chain_5
+    - star_3
+    - star_5
+    - temporal_burst
+  
+  # Time constraints
+  max_temporal_gap_seconds: 3600  # 1 hour between edges in a pattern
+  
+  # GNN-based candidate pruning
+  use_gnn_filter: true
+  gnn_filter_threshold: 0.7
+
+tier1:
+  # XGBoost classifier
+  xgboost:
+    max_depth: 6
+    n_estimators: 200
+    learning_rate: 0.1
+    objective: "binary:logistic"
+    eval_metric: "auc"
+    scale_pos_weight: 50  # Handle class imbalance
+  
+  # Escalation threshold
+  escalation_threshold: 0.3
+  target_latency_ms: 5
+
+tier2:
+  # TGN backbone
+  tgn:
+    memory_dim: 128
+    embedding_dim: 128
+    time_dim: 64
+    num_layers: 2
+    num_heads: 4
+    neighbor_sample_size: 20
+    dropout: 0.1
+    message_function: "identity"  # or "mlp"
+    memory_updater: "gru"  # or "rnn"
+    aggregator: "last"  # or "mean"
+  
+  # Incremental inference
+  incremental:
+    use_inkstream: true
+    affected_hop_threshold: 2
+  
+  # NeuroMatch embedding
+  neuromatch:
+    embedding_dim: 64
+    order_embedding: true
+  
+  # Escalation
+  escalation_threshold: 0.5
+  target_latency_ms: 50
+
+tier3:
+  # SubGNN 3-channel encoder
+  subgnn:
+    channels: ["neighborhood", "structure", "position"]
+    hidden_dim: 128
+    output_dim: 64
+    num_layers: 3
+    dropout: 0.2
+  
+  # Contrastive pre-training
+  contrastive:
+    temperature: 0.07
+    edge_dropout_rate: 0.2
+    temporal_jitter_std: 60  # seconds
+    subgraph_crop_ratio: 0.8
+    pretrain_epochs: 100
+    pretrain_lr: 1e-3
+    pretrain_batch_size: 256
+  
+  # k-hop extraction
+  k_hop: 2
+  max_subgraph_nodes: 100
+  
+  # Fine-tuning
+  finetune_epochs: 50
+  finetune_lr: 5e-4
+  target_latency_ms: 500
+
+training:
+  batch_size: 256
+  learning_rate: 1e-3
+  weight_decay: 1e-5
+  patience: 10
+  max_epochs: 100
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+evaluation:
+  metrics:
+    - auc_roc
+    - f1_score
+    - pr_auc
+    - mcc
+    - rdt  # Ring Detection Timeliness
+    - latency_p50
+    - latency_p95
+    - latency_p99
+    - throughput
+  
+  # Streaming simulation
+  replay_speed: 1.0  # 1x real-time, adjustable
+  warmup_transactions: 1000

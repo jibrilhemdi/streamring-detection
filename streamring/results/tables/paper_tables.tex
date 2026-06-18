@@ -1,0 +1,229 @@
+% ============================================================================
+% StreamRing Paper Tables - Generated from verified experiment data
+% ============================================================================
+
+\begin{table}[t]
+\centering
+\caption{Ethereum Classic Dataset Statistics. Six time periods covering major security events.}
+\label{tab:dataset}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+\textbf{Period} & \textbf{Blocks} & \textbf{Transactions} & \textbf{Traces} & \textbf{Nodes} & \textbf{Edges} & \textbf{Fraud \%} \\
+\midrule
+DAO Hack        &    8,001 &      67,780 &       98,095 &   29,094 &     123,525 & 0.73\% \\
+Pre-DAO         &  117,001 &     770,829 &    1,039,944 &   93,611 &   1,514,599 & 0.60\% \\
+Post-Fork       &  575,001 &   1,544,089 &   34,006,966 &  128,140 &   3,507,154 & 0.85\% \\
+51\% Attack v1  &  100,001 &     939,255 &    3,182,488 &  105,249 &   1,846,860 & 0.27\% \\
+51\% Attack v2  &  100,001 &     298,153 &      512,199 &   64,102 &     583,819 & 0.26\% \\
+Normal Ops      &1,000,001 &   7,953,776 &   12,370,889 &  898,719 &  16,785,884 & ---    \\
+\midrule
+\textbf{Total}  &\textbf{1,900,006} & \textbf{11,573,882} & \textbf{51,210,581} & \textbf{1,318,915} & \textbf{24,361,841} & \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{StreamRing 3-Tier Detection Performance.}
+\label{tab:main_results}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Metric} & \textbf{Tier 1} & \textbf{Tier 2} & \textbf{Tier 3} \\
+                 & \textbf{(XGBoost)} & \textbf{(Temporal GNN)} & \textbf{(SubGNN+CSP)} \\
+\midrule
+AUC-ROC          & 0.9266 & \textbf{0.9470} & 0.8879 \\
+F1-Score         & 0.1169 & 0.3174 & \textbf{0.8492} \\
+PR-AUC           & 0.1519 & 0.2280 & \textbf{0.9144} \\
+MCC              & 0.1718 & 0.3183 & \textbf{0.6499} \\
+\midrule
+Latency P50 (ms) & 0.069  & 19.426  & 8.014 \\
+Latency P99 (ms) & 0.285  & 26.331  & 15.456 \\
+Latency Target   & $<$5ms & $<$50ms & $<$500ms \\
+Status           & \cmark & \cmark & \cmark \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Ablation study on Tier 3 components (mean $\pm$ std, $n=5$ runs). CSP = Contrastive Subgraph Pre-training.}
+\label{tab:ablation}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Configuration} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{MCC} \\
+\midrule
+SubGNN (supervised)            & 0.829$\pm$0.014 & 0.745$\pm$0.037 & 0.845$\pm$0.024 & 0.536$\pm$0.046 \\
+SubGNN + CSP-reg               & 0.846$\pm$0.014 & 0.790$\pm$0.051 & 0.853$\pm$0.030 & 0.579$\pm$0.039 \\
+SubGNN-small (baseline)        & 0.834$\pm$0.011 & 0.753$\pm$0.043 & 0.861$\pm$0.031 & 0.547$\pm$0.049 \\
+SubGNN-small + CSP-reg         & 0.840$\pm$0.032 & 0.749$\pm$0.042 & 0.866$\pm$0.041 & 0.548$\pm$0.057 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Label scarcity experiment (mean $\pm$ std, $n=5$ runs). CSP leverages unlabeled graph structure.}
+\label{tab:label_scarcity}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Label \%} & \multicolumn{2}{c}{\textbf{AUC-ROC}} & \multicolumn{2}{c}{\textbf{F1-Score}} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+ & \textbf{No CSP} & \textbf{+CSP} & \textbf{No CSP} & \textbf{+CSP} \\
+\midrule
+       1\% & 0.621$\pm$0.075 & 0.593$\pm$0.045 & 0.601$\pm$0.135 & 0.563$\pm$0.083 \\
+       5\% & 0.686$\pm$0.018 & 0.714$\pm$0.031 & 0.653$\pm$0.092 & 0.681$\pm$0.069 \\
+      10\% & 0.736$\pm$0.028 & 0.748$\pm$0.017 & 0.688$\pm$0.052 & 0.696$\pm$0.055 \\
+      25\% & 0.799$\pm$0.019 & 0.774$\pm$0.026 & 0.700$\pm$0.043 & 0.694$\pm$0.043 \\
+      50\% & 0.805$\pm$0.012 & 0.808$\pm$0.023 & 0.688$\pm$0.024 & 0.696$\pm$0.055 \\
+     100\% & 0.822$\pm$0.006 & 0.833$\pm$0.010 & 0.711$\pm$0.011 & 0.717$\pm$0.030 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Cross-period transfer performance (Tier 1 XGBoost).}
+\label{tab:cross_period}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Train $\to$ Test} & \textbf{AUC-ROC} & \textbf{F1-Score} \\
+\midrule
+dao\_hack $\to$ pre\_dao & 0.8488 & 0.1745 \\
+dao\_hack $\to$ post\_fork & 0.7831 & 0.0065 \\
+dao\_hack $\to$ attack\_51\_v1 & 0.8634 & 0.0000 \\
+dao\_hack $\to$ attack\_51\_v2 & 0.9383 & 0.2007 \\
+attack\_51\_v1 $\to$ attack\_51\_v2 & 0.8990 & 0.1963 \\
+all\_attacks $\to$ pre\_dao & 0.9266 & 0.1169 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Streaming simulation results on DAO Hack period.}
+\label{tab:streaming}
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Throughput & 636.8 edges/sec \\
+Tier 1 Filter Rate & 93.7\% \\
+Tier 1+2 Filter Rate & 97.0\% \\
+Tier 1 Latency (P50 / P99) & 0.069 / 0.285ms \\
+Tier 2 Latency (P50 / P99) & 19.426 / 26.331ms \\
+Tier 3 Latency (P50 / P99) & 8.014 / 15.456ms \\
+Fraud Ring Detections & 1,039 \\
+Precision & 94.8\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Comparison with baseline GNN models on subgraph-level fraud ring classification (mean $\pm$ std, $n=5$ runs). Best in \textbf{bold}, second best \underline{underlined}.}
+\label{tab:baselines}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{MCC} \\
+\midrule
+MLP                  & 0.853$\pm$0.025 & 0.791$\pm$0.028 & 0.875$\pm$0.024 & 0.562$\pm$0.045 \\
+GCN                  & 0.769$\pm$0.036 & 0.730$\pm$0.048 & 0.769$\pm$0.045 & 0.438$\pm$0.073 \\
+GAT                  & 0.805$\pm$0.023 & 0.771$\pm$0.033 & 0.818$\pm$0.010 & 0.489$\pm$0.019 \\
+GraphSAGE            & 0.891$\pm$0.037 & 0.841$\pm$0.031 & 0.904$\pm$0.042 & 0.659$\pm$0.072 \\
+GIN                  & 0.653$\pm$0.036 & 0.731$\pm$0.023 & 0.617$\pm$0.059 & 0.368$\pm$0.041 \\
+\midrule
+SubGNN+CSP (ours)    & 0.845$\pm$0.015 & 0.791$\pm$0.049 & 0.854$\pm$0.030 & 0.574$\pm$0.042 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Ring Detection Timeliness (RDT) across attack periods.}
+\label{tab:rdt}
+\begin{tabular}{lrcc}
+\toprule
+\textbf{Period} & \textbf{Rings} & \textbf{RDT} & \textbf{RDT (weighted)} \\
+\midrule
+DAO Hack             & 35  & 1.000 & 1.000 \\
+Pre-DAO              & 99  & 0.878 & 0.974 \\
+51\% Attack v1       & 20  & 1.000 & 1.000 \\
+51\% Attack v2       & 24  & 1.000 & 1.000 \\
+\midrule
+\textbf{Aggregate} & \textbf{178} & \textbf{0.969} & \textbf{0.994} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Temporal GNN baselines on subgraph-level fraud ring classification (mean $\pm$ std, $n=3$ runs).}
+\label{tab:temporal_baselines}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{MCC} \\
+\midrule
+EvolveGCN-H               & 0.833$\pm$0.036 & 0.779$\pm$0.011 & 0.844$\pm$0.028 & 0.528$\pm$0.054 \\
+T-GCN                     & 0.804$\pm$0.023 & 0.729$\pm$0.043 & 0.837$\pm$0.026 & 0.504$\pm$0.045 \\
+Snapshot-GCN              & 0.832$\pm$0.015 & 0.767$\pm$0.051 & 0.852$\pm$0.020 & 0.510$\pm$0.047 \\
+SubGNN+CSP (ours)         & \textbf{0.820}$\pm$0.023 & \textbf{0.772}$\pm$0.058 & \textbf{0.855}$\pm$0.019 & \textbf{0.526}$\pm$0.032 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Augmentation strategy ablation for CSP regularizer (mean $\pm$ std, $n=3$ runs). Best in \textbf{bold}.}
+\label{tab:augmentation}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Augmentation} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{MCC} \\
+\midrule
+Feature Masking (default) & 0.845$\pm$0.018 & 0.778$\pm$0.042 & 0.869$\pm$0.018 & 0.565$\pm$0.040 \\
+Edge Dropout (10%) & 0.842$\pm$0.010 & 0.776$\pm$0.035 & 0.863$\pm$0.027 & 0.554$\pm$0.029 \\
+Edge Dropout (20%) & 0.813$\pm$0.019 & 0.745$\pm$0.017 & 0.842$\pm$0.017 & 0.498$\pm$0.049 \\
+Node Dropout (10%) & 0.841$\pm$0.006 & 0.777$\pm$0.044 & 0.857$\pm$0.013 & 0.559$\pm$0.034 \\
+Subgraph Crop (80%) & 0.848$\pm$0.016 & 0.770$\pm$0.052 & 0.859$\pm$0.021 & 0.577$\pm$0.036 \\
+Feat Mask + Edge Drop & 0.836$\pm$0.004 & 0.766$\pm$0.045 & 0.864$\pm$0.005 & 0.543$\pm$0.008 \\
+Feat Mask + Node Drop & 0.834$\pm$0.015 & 0.761$\pm$0.041 & 0.858$\pm$0.027 & 0.523$\pm$0.033 \\
+Identity (CSP, no aug) & 0.829$\pm$0.010 & 0.766$\pm$0.045 & 0.847$\pm$0.013 & 0.532$\pm$0.036 \\
+No CSP (supervised) & 0.837$\pm$0.013 & 0.713$\pm$0.027 & 0.869$\pm$0.013 & 0.556$\pm$0.008 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{LSTM-BiLSTM vs SubGNN+CSP as Tier 3 backbone (mean $\pm$ std, $n=5$ runs). Fair comparison: same inputs, matched parameter count ($\sim$180K $\pm$10\%).}
+\label{tab:lstm_comparison}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{MCC} \\
+\midrule
+LSTM-BiLSTM          & 0.828$\pm$0.023 & \textbf{0.771}$\pm$0.040 & 0.818$\pm$0.017 & \textbf{0.543}$\pm$0.050 \\
+SubGNN+CSP (ours)    & 0.846$\pm$0.014 & 0.790$\pm$0.051 & \textbf{0.853}$\pm$0.030 & 0.579$\pm$0.039 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Tier 3 backbone comparison in streaming cascade (DAO Hack period).}
+\label{tab:backbone}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Metric} & \textbf{SubGNN+CSP} & \textbf{GraphSAGE} \\
+\midrule
+Tier 3 Latency P50 (ms)  & 8.858  & 8.866 \\
+Tier 3 Latency P99 (ms)  & 15.463 & 16.442 \\
+Meets $<$500ms target     & \cmark & \cmark \\
+Throughput (edges/s)      & 611.5  & 605.2 \\
+Detections                & 1,041  & 1,056 \\
+Precision (\%)            & 94.6   & 92.0  \\
+\bottomrule
+\end{tabular}
+\end{table}

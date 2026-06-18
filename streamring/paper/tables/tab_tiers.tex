@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{StreamRing 3-Tier Detection Performance.}
+\label{tab:tiers}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Metric} & \textbf{Tier 1} & \textbf{Tier 2} & \textbf{Tier 3} \\
+                 & \textbf{(XGBoost)} & \textbf{(Temporal GNN)} & \textbf{(SubGNN+CSP)} \\
+\midrule
+AUC-ROC          & 0.9266 & \textbf{0.9470} & 0.8879 \\
+F1-Score         & 0.1169 & 0.3174 & \textbf{0.8492} \\
+PR-AUC           & 0.1519 & 0.2280 & \textbf{0.9144} \\
+MCC              & 0.1718 & 0.3183 & \textbf{0.6499} \\
+\midrule
+Latency P50 (ms) & 0.385  & 31.619  & 22.089 \\
+Latency P99 (ms) & 1.484  & 43.700  & 46.964 \\
+Latency Target   & $<$5ms & $<$50ms & $<$500ms \\
+Status           & \cmark & \cmark & \cmark \\
+\bottomrule
+\end{tabular}
+\end{table}

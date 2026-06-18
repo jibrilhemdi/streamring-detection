@@ -1,0 +1,55 @@
+{
+  "SubGNN+CSP": {
+    "model": "SubGNN+CSP",
+    "throughput": 611.5,
+    "tier3_latency_p50": 8.858,
+    "tier3_latency_p99": 15.463,
+    "tier3_meets_target": true,
+    "detections": 1041,
+    "precision": 94.6,
+    "confusion": {
+      "tp": 985,
+      "fp": 56,
+      "tn": 46237,
+      "fn": 2132
+    },
+    "tier_distribution": {
+      "tier1_safe": 46312,
+      "tier2_suspicious": 1591,
+      "tier3_fraud": 1041,
+      "tier3_likely_fraud": 466
+    },
+    "filter_rate_tier1": 93.73,
+    "filter_rate_tier12": 96.95
+  },
+  "GraphSAGE": {
+    "model": "GraphSAGE",
+    "throughput": 605.2,
+    "tier3_latency_p50": 8.866,
+    "tier3_latency_p99": 16.442,
+    "tier3_meets_target": true,
+    "detections": 1056,
+    "precision": 92.0,
+    "confusion": {
+      "tp": 971,
+      "fp": 85,
+      "tn": 46208,
+      "fn": 2146
+    },
+    "tier_distribution": {
+      "tier1_safe": 46312,
+      "tier2_suspicious": 1591,
+      "tier3_fraud": 1056,
+      "tier3_likely_fraud": 451
+    },
+    "filter_rate_tier1": 93.73,
+    "filter_rate_tier12": 96.95
+  },
+  "shared_config": {
+    "tier1_threshold": 0.5215483903884888,
+    "warmup_edges": 74115,
+    "eval_edges": 49410,
+    "train_subgraphs": 87,
+    "period": "dao_hack"
+  }
+}

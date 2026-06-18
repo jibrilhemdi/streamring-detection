@@ -1,0 +1,38 @@
+{
+  "dao_hack->pre_dao": {
+    "auc_roc": 0.8488,
+    "f1": 0.1745,
+    "pr_auc": 0.1012,
+    "mcc": 0.1725
+  },
+  "dao_hack->post_fork": {
+    "auc_roc": 0.7831,
+    "f1": 0.0065,
+    "pr_auc": 0.0262,
+    "mcc": -0.0005
+  },
+  "dao_hack->attack_51_v1": {
+    "auc_roc": 0.8634,
+    "f1": 0.0,
+    "pr_auc": 0.0522,
+    "mcc": -0.001
+  },
+  "dao_hack->attack_51_v2": {
+    "auc_roc": 0.9383,
+    "f1": 0.2007,
+    "pr_auc": 0.1555,
+    "mcc": 0.2053
+  },
+  "attack_51_v1->attack_51_v2": {
+    "auc_roc": 0.899,
+    "f1": 0.1963,
+    "pr_auc": 0.1783,
+    "mcc": 0.1952
+  },
+  "all_attacks->pre_dao": {
+    "auc_roc": 0.9266,
+    "f1": 0.1169,
+    "pr_auc": 0.1519,
+    "mcc": 0.1718
+  }
+}

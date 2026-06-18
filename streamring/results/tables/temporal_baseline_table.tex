@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\caption{Temporal GNN baselines on subgraph-level fraud ring classification (mean $\pm$ std, $n=3$ runs).}
+\label{tab:temporal_baselines}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{MCC} \\
+\midrule
+EvolveGCN-H               & 0.833$\pm$0.036 & 0.779$\pm$0.011 & 0.844$\pm$0.028 & 0.528$\pm$0.054 \\
+T-GCN                     & 0.804$\pm$0.023 & 0.729$\pm$0.043 & 0.837$\pm$0.026 & 0.504$\pm$0.045 \\
+Snapshot-GCN              & 0.832$\pm$0.015 & 0.767$\pm$0.051 & 0.852$\pm$0.020 & 0.510$\pm$0.047 \\
+SubGNN+CSP (ours)         & 0.820$\pm$0.023 & 0.772$\pm$0.058 & 0.855$\pm$0.019 & 0.526$\pm$0.032 \\
+\bottomrule
+\end{tabular}
+\end{table}

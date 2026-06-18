@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+dist/
+build/
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# Data (large files - not tracked in git)
+data/raw/
+data/processed/
+data/graphs/
+data/embeddings/
+
+# Trained models (large binary files)
+models/
+!models/.gitkeep
+
+# Experiment outputs that can be regenerated
+results/archive/
+notebooks/*.ipynb_checkpoints/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.env
+*.key
+credentials*.json
+*.docx
+
+# Contributor-local overrides
+configs/local.yaml
+*.local.yaml
+
+# Internal planning documents
+docs/superpowers/
+NEXT_STEPS.md
+MASTER_RESEARCH_BLUEPRINT.md
+STREAMRING_COMPLETE_REFERENCE.md
+*.todo.md
+*.scratch.md
+
+# Logs
+*.log
+logs/
+.pytest_cache/

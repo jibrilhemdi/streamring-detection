@@ -1,0 +1,813 @@
+{
+  "ablation": {
+    "comparisons": [
+      {
+        "comparison": "SubGNN + CSP-reg vs SubGNN (supervised)",
+        "metric": "auc_roc",
+        "mean_a": 0.887937005934232,
+        "mean_b": 0.8758858840405341,
+        "diff": 0.012051121893697836,
+        "paired_ttest": {
+          "t_stat": 2.035040007834597,
+          "p_value": 0.11157109983893203
+        },
+        "wilcoxon": {
+          "w_stat": 2.0,
+          "p_value": 0.1875
+        },
+        "cohens_d": 0.5046458600254146,
+        "effect_size": "medium",
+        "diff_ci_95": [
+          -0.004390460711600371,
+          0.02849270449899582
+        ]
+      },
+      {
+        "comparison": "SubGNN + CSP-reg vs SubGNN (supervised)",
+        "metric": "f1",
+        "mean_a": 0.8492316148159172,
+        "mean_b": 0.8468973455821025,
+        "diff": 0.0023342692338147453,
+        "paired_ttest": {
+          "t_stat": 0.24953806596972058,
+          "p_value": 0.8152353139890599
+        },
+        "wilcoxon": {
+          "w_stat": 5.0,
+          "p_value": 0.625
+        },
+        "cohens_d": 0.07660825308624873,
+        "effect_size": "negligible",
+        "diff_ci_95": [
+          -0.023637601483596928,
+          0.028306139951226238
+        ]
+      },
+      {
+        "comparison": "SubGNN + CSP-reg vs SubGNN (supervised)",
+        "metric": "pr_auc",
+        "mean_a": 0.9144101793901573,
+        "mean_b": 0.8938410229449444,
+        "diff": 0.020569156445212955,
+        "paired_ttest": {
+          "t_stat": 3.4489925445506047,
+          "p_value": 0.026078453561871346
+        },
+        "wilcoxon": {
+          "w_stat": 0.0,
+          "p_value": 0.0625
+        },
+        "cohens_d": 0.8528722492589293,
+        "effect_size": "large",
+        "diff_ci_95": [
+          0.004010949086779719,
+          0.037127363803646105
+        ]
+      },
+      {
+        "comparison": "SubGNN + CSP-reg vs SubGNN (supervised)",
+        "metric": "mcc",
+        "mean_a": 0.6499201040498976,
+        "mean_b": 0.6328822888397362,
+        "diff": 0.017037815210161456,
+        "paired_ttest": {
+          "t_stat": 0.846412698572987,
+          "p_value": 0.4449888407083219
+        },
+        "wilcoxon": {
+          "w_stat": 4.0,
+          "p_value": 0.4375
+        },
+        "cohens_d": 0.3027036223567823,
+        "effect_size": "small",
+        "diff_ci_95": [
+          -0.03885047512772032,
+          0.07292610554804305
+        ]
+      },
+      {
+        "comparison": "SubGNN-small + CSP-reg vs SubGNN-small (baseline)",
+        "metric": "auc_roc",
+        "mean_a": 0.8799677757056994,
+        "mean_b": 0.8867682305453238,
+        "diff": -0.006800454839624437,
+        "paired_ttest": {
+          "t_stat": -1.4939154126071128,
+          "p_value": 0.2095008185680693
+        },
+        "wilcoxon": {
+          "w_stat": 4.0,
+          "p_value": 0.4375
+        },
+        "cohens_d": -0.326527411526854,
+        "effect_size": "small",
+        "diff_ci_95": [
+          -0.019439115230471864,
+          0.005838205551222947
+        ]
+      },
+      {
+        "comparison": "SubGNN-small + CSP-reg vs SubGNN-small (baseline)",
+        "metric": "f1",
+        "mean_a": 0.8553731350336264,
+        "mean_b": 0.8615688808802735,
+        "diff": -0.0061957458466470605,
+        "paired_ttest": {
+          "t_stat": -0.5011728741234501,
+          "p_value": 0.6425742788615776
+        },
+        "wilcoxon": {
+          "w_stat": 5.0,
+          "p_value": 0.625
+        },
+        "cohens_d": -0.29119335515084305,
+        "effect_size": "small",
+        "diff_ci_95": [
+          -0.040519527354294524,
+          0.028128035661000268
+        ]
+      },
+      {
+        "comparison": "SubGNN-small + CSP-reg vs SubGNN-small (baseline)",
+        "metric": "pr_auc",
+        "mean_a": 0.9071706880844748,
+        "mean_b": 0.9007517410895323,
+        "diff": 0.006418946994942498,
+        "paired_ttest": {
+          "t_stat": 0.8045741611427976,
+          "p_value": 0.4661646422447371
+        },
+        "wilcoxon": {
+          "w_stat": 5.0,
+          "p_value": 0.625
+        },
+        "cohens_d": 0.24390615567195909,
+        "effect_size": "small",
+        "diff_ci_95": [
+          -0.0157317195630268,
+          0.028569613552911575
+        ]
+      },
+      {
+        "comparison": "SubGNN-small + CSP-reg vs SubGNN-small (baseline)",
+        "metric": "mcc",
+        "mean_a": 0.6529947787227413,
+        "mean_b": 0.6554353996883451,
+        "diff": -0.0024406209656038236,
+        "paired_ttest": {
+          "t_stat": -0.09964652564453882,
+          "p_value": 0.9254193028159776
+        },
+        "wilcoxon": {
+          "w_stat": 7.0,
+          "p_value": 1.0
+        },
+        "cohens_d": -0.06334744293620848,
+        "effect_size": "negligible",
+        "diff_ci_95": [
+          -0.07044349502231124,
+          0.06556225309110346
+        ]
+      },
+      {
+        "comparison": "SubGNN + CSP-reg vs SubGNN-small + CSP-reg",
+        "metric": "auc_roc",
+        "mean_a": 0.887937005934232,
+        "mean_b": 0.8799677757056994,
+        "diff": 0.007969230228532576,
+        "paired_ttest": {
+          "t_stat": 1.1950834937709416,
+          "p_value": 0.29806553953173276
+        },
+        "wilcoxon": {
+          "w_stat": 4.0,
+          "p_value": 0.4375
+        },
+        "cohens_d": 0.39263851786761866,
+        "effect_size": "small",
+        "diff_ci_95": [
+          -0.010545066367086162,
+          0.026483526824151223
+        ]
+      },
+      {
+        "comparison": "SubGNN + CSP-reg vs SubGNN-small + CSP-reg",
+        "metric": "f1",
+        "mean_a": 0.8492316148159172,
+        "mean_b": 0.8553731350336264,
+        "diff": -0.006141520217709195,
+        "paired_ttest": {
+          "t_stat": -0.6162843411591261,
+          "p_value": 0.5710504040109645
+        },
+        "wilcoxon": {
+          "w_stat": 5.0,
+          "p_value": 0.625
+        },
+        "cohens_d": -0.27871898489184477,
+        "effect_size": "small",
+        "diff_ci_95": [
+          -0.033809907369751556,
+          0.021526866934333123
+        ]
+      },
+      {
+        "comparison": "SubGNN + CSP-reg vs SubGNN-small + CSP-reg",
+        "metric": "pr_auc",
+        "mean_a": 0.9144101793901573,
+        "mean_b": 0.9071706880844748,
+        "diff": 0.007239491305682577,
+        "paired_ttest": {
+          "t_stat": 0.844858520431378,
+          "p_value": 0.44576149437027424
+        },
+        "wilcoxon": {
+          "w_stat": 4.0,
+          "p_value": 0.4375
+        },
+        "cohens_d": 0.36392511768650676,
+        "effect_size": "small",
+        "diff_ci_95": [
+          -0.016551533716496716,
+          0.03103051632786178
+        ]
+      },
+      {
+        "comparison": "SubGNN + CSP-reg vs SubGNN-small + CSP-reg",
+        "metric": "mcc",
+        "mean_a": 0.6499201040498976,
+        "mean_b": 0.6529947787227413,
+        "diff": -0.0030746746728436136,
+        "paired_ttest": {
+          "t_stat": -0.17589503931445907,
+          "p_value": 0.8689221883022975
+        },
+        "wilcoxon": {
+          "w_stat": 7.0,
+          "p_value": 1.0
+        },
+        "cohens_d": -0.10051477397520815,
+        "effect_size": "negligible",
+        "diff_ci_95": [
+          -0.051607398954118255,
+          0.045458049608430806
+        ]
+      }
+    ],
+    "confidence_intervals": {
+      "SubGNN + CSP-reg": {
+        "auc_roc": {
+          "mean": 0.887937005934232,
+          "ci_lower": 0.8597234747146528,
+          "ci_upper": 0.9161505371538111
+        },
+        "f1": {
+          "mean": 0.8492316148159172,
+          "ci_lower": 0.8220521563899802,
+          "ci_upper": 0.8764110732418543
+        },
+        "pr_auc": {
+          "mean": 0.9144101793901573,
+          "ci_lower": 0.8892472928592097,
+          "ci_upper": 0.939573065921105
+        },
+        "mcc": {
+          "mean": 0.6499201040498976,
+          "ci_lower": 0.6117203157278415,
+          "ci_upper": 0.6881198923719538
+        }
+      },
+      "SubGNN (supervised)": {
+        "auc_roc": {
+          "mean": 0.8758858840405341,
+          "ci_lower": 0.8448632331951521,
+          "ci_upper": 0.9069085348859162
+        },
+        "f1": {
+          "mean": 0.8468973455821025,
+          "ci_lower": 0.800809782696132,
+          "ci_upper": 0.892984908468073
+        },
+        "pr_auc": {
+          "mean": 0.8938410229449444,
+          "ci_lower": 0.8597773101939039,
+          "ci_upper": 0.9279047356959849
+        },
+        "mcc": {
+          "mean": 0.6328822888397362,
+          "ci_lower": 0.5417267043008014,
+          "ci_upper": 0.724037873378671
+        }
+      },
+      "SubGNN-small + CSP-reg": {
+        "auc_roc": {
+          "mean": 0.8799677757056994,
+          "ci_lower": 0.8581908451288086,
+          "ci_upper": 0.9017447062825902
+        },
+        "f1": {
+          "mean": 0.8553731350336264,
+          "ci_lower": 0.8278341112149029,
+          "ci_upper": 0.88291215885235
+        },
+        "pr_auc": {
+          "mean": 0.9071706880844748,
+          "ci_lower": 0.8829420506304069,
+          "ci_upper": 0.9313993255385427
+        },
+        "mcc": {
+          "mean": 0.6529947787227413,
+          "ci_lower": 0.6152326095310359,
+          "ci_upper": 0.6907569479144466
+        }
+      },
+      "SubGNN-small (baseline)": {
+        "auc_roc": {
+          "mean": 0.8867682305453238,
+          "ci_lower": 0.8573878489337567,
+          "ci_upper": 0.9161486121568909
+        },
+        "f1": {
+          "mean": 0.8615688808802735,
+          "ci_lower": 0.8363195578612449,
+          "ci_upper": 0.8868182038993021
+        },
+        "pr_auc": {
+          "mean": 0.9007517410895323,
+          "ci_lower": 0.8613998073128261,
+          "ci_upper": 0.9401036748662385
+        },
+        "mcc": {
+          "mean": 0.6554353996883451,
+          "ci_lower": 0.5993014880623945,
+          "ci_upper": 0.7115693113142957
+        }
+      }
+    }
+  },
+  "label_scarcity": {
+    "comparisons": [
+      {
+        "fraction": 0.01,
+        "delta_auc": 0.0030185758513932015,
+        "delta_f1": -0.005199005984396821,
+        "note": "no per-run data for paired test"
+      },
+      {
+        "fraction": 0.05,
+        "delta_auc": -0.018675364882795198,
+        "delta_f1": -0.026720335851206367,
+        "note": "no per-run data for paired test"
+      },
+      {
+        "fraction": 0.1,
+        "delta_auc": 0.006954887218045047,
+        "delta_f1": -0.029076942912695358,
+        "note": "no per-run data for paired test"
+      },
+      {
+        "fraction": 0.25,
+        "delta_auc": 0.006733746130030638,
+        "delta_f1": -0.031056328324209792,
+        "note": "no per-run data for paired test"
+      },
+      {
+        "fraction": 0.5,
+        "delta_auc": 0.02585139318885432,
+        "delta_f1": 0.03023283317576675,
+        "note": "no per-run data for paired test"
+      },
+      {
+        "fraction": 1.0,
+        "delta_auc": 0.01468376824413975,
+        "delta_f1": 0.00032745102171871654,
+        "note": "no per-run data for paired test"
+      }
+    ],
+    "note": "only mean/std available, no per-run paired tests"
+  },
+  "baselines": {
+    "comparisons": [
+      {
+        "comparison": "SubGNN+CSP vs GCN",
+        "metric": "auc_roc",
+        "mean_a": 0.8874149252377984,
+        "mean_b": 0.848693518697958,
+        "diff": 0.038721406539840464,
+        "paired_ttest": {
+          "t_stat": 2.6354493553137526,
+          "p_value": 0.05785516194026566
+        },
+        "wilcoxon": {
+          "w_stat": 0.0,
+          "p_value": 0.0625
+        },
+        "cohens_d": 1.0609683109219286,
+        "effect_size": "large",
+        "diff_ci_95": [
+          -0.0020715836335999938,
+          0.07951439671328092
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GCN",
+        "metric": "f1",
+        "mean_a": 0.8409020738839332,
+        "mean_b": 0.8223389135817266,
+        "diff": 0.018563160302206616,
+        "paired_ttest": {
+          "t_stat": 0.988080856866711,
+          "p_value": 0.3790486971363743
+        },
+        "wilcoxon": {
+          "w_stat": 5.0,
+          "p_value": 0.625
+        },
+        "cohens_d": 0.4339829755662777,
+        "effect_size": "small",
+        "diff_ci_95": [
+          -0.033598153420134225,
+          0.0707244740245478
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GCN",
+        "metric": "pr_auc",
+        "mean_a": 0.8990167107970579,
+        "mean_b": 0.8631118470598581,
+        "diff": 0.03590486373719981,
+        "paired_ttest": {
+          "t_stat": 1.813525022486249,
+          "p_value": 0.143956168421091
+        },
+        "wilcoxon": {
+          "w_stat": 0.0,
+          "p_value": 0.0625
+        },
+        "cohens_d": 0.8004028655279307,
+        "effect_size": "large",
+        "diff_ci_95": [
+          -0.019064261000475653,
+          0.09087398847487557
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GCN",
+        "metric": "mcc",
+        "mean_a": 0.6457304073284501,
+        "mean_b": 0.5949354988305098,
+        "diff": 0.05079490849794033,
+        "paired_ttest": {
+          "t_stat": 1.9952173579680195,
+          "p_value": 0.11675251744365764
+        },
+        "wilcoxon": {
+          "w_stat": 3.0,
+          "p_value": 0.3125
+        },
+        "cohens_d": 0.726061481420131,
+        "effect_size": "medium",
+        "diff_ci_95": [
+          -0.0198887563693822,
+          0.12147857336526274
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GAT",
+        "metric": "auc_roc",
+        "mean_a": 0.8874149252377984,
+        "mean_b": 0.866300370906227,
+        "diff": 0.02111455433157139,
+        "paired_ttest": {
+          "t_stat": 5.201378663534808,
+          "p_value": 0.00650998549494446
+        },
+        "wilcoxon": {
+          "w_stat": 0.0,
+          "p_value": 0.0625
+        },
+        "cohens_d": 0.8064011142693452,
+        "effect_size": "large",
+        "diff_ci_95": [
+          0.009843811550755551,
+          0.032385297112387045
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GAT",
+        "metric": "f1",
+        "mean_a": 0.8409020738839332,
+        "mean_b": 0.8344142262601488,
+        "diff": 0.006487847623784404,
+        "paired_ttest": {
+          "t_stat": 0.40143131729601056,
+          "p_value": 0.7086243702810857
+        },
+        "wilcoxon": {
+          "w_stat": 6.0,
+          "p_value": 0.8125
+        },
+        "cohens_d": 0.2542046874683406,
+        "effect_size": "small",
+        "diff_ci_95": [
+          -0.038384468018301754,
+          0.0513601632658703
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GAT",
+        "metric": "pr_auc",
+        "mean_a": 0.8990167107970579,
+        "mean_b": 0.8904945246181933,
+        "diff": 0.008522186178864577,
+        "paired_ttest": {
+          "t_stat": 1.0250507379561187,
+          "p_value": 0.3632803045528721
+        },
+        "wilcoxon": {
+          "w_stat": 4.0,
+          "p_value": 0.4375
+        },
+        "cohens_d": 0.29883985475715463,
+        "effect_size": "small",
+        "diff_ci_95": [
+          -0.014560946417159232,
+          0.031605318774888744
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GAT",
+        "metric": "mcc",
+        "mean_a": 0.6457304073284501,
+        "mean_b": 0.6047615288924122,
+        "diff": 0.040968878436037914,
+        "paired_ttest": {
+          "t_stat": 1.62285006441139,
+          "p_value": 0.17994237248005635
+        },
+        "wilcoxon": {
+          "w_stat": 2.0,
+          "p_value": 0.1875
+        },
+        "cohens_d": 0.8767788031589453,
+        "effect_size": "large",
+        "diff_ci_95": [
+          -0.02912252710636956,
+          0.11106028397844525
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GraphSAGE",
+        "metric": "auc_roc",
+        "mean_a": 0.8874149252377984,
+        "mean_b": 0.9442555029007236,
+        "diff": -0.05684057766292516,
+        "paired_ttest": {
+          "t_stat": -5.558730412597377,
+          "p_value": 0.00512756540719376
+        },
+        "wilcoxon": {
+          "w_stat": 0.0,
+          "p_value": 0.0625
+        },
+        "cohens_d": -2.774757594668862,
+        "effect_size": "large",
+        "diff_ci_95": [
+          -0.08523100711624038,
+          -0.028450148209609952
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GraphSAGE",
+        "metric": "f1",
+        "mean_a": 0.8409020738839332,
+        "mean_b": 0.8907700839777147,
+        "diff": -0.0498680100937815,
+        "paired_ttest": {
+          "t_stat": -5.708916258823849,
+          "p_value": 0.0046552274962145136
+        },
+        "wilcoxon": {
+          "w_stat": 0.0,
+          "p_value": 0.0625
+        },
+        "cohens_d": -2.0466639374840363,
+        "effect_size": "large",
+        "diff_ci_95": [
+          -0.07412056281196737,
+          -0.025615457375595636
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GraphSAGE",
+        "metric": "pr_auc",
+        "mean_a": 0.8990167107970579,
+        "mean_b": 0.9530519411728301,
+        "diff": -0.05403523037577218,
+        "paired_ttest": {
+          "t_stat": -6.483885433703189,
+          "p_value": 0.002916744164662955
+        },
+        "wilcoxon": {
+          "w_stat": 0.0,
+          "p_value": 0.0625
+        },
+        "cohens_d": -2.538617191229536,
+        "effect_size": "large",
+        "diff_ci_95": [
+          -0.07717349406334666,
+          -0.030896966688197663
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GraphSAGE",
+        "metric": "mcc",
+        "mean_a": 0.6457304073284501,
+        "mean_b": 0.7597543489964262,
+        "diff": -0.11402394166797614,
+        "paired_ttest": {
+          "t_stat": -4.8149977633715215,
+          "p_value": 0.008554111567365932
+        },
+        "wilcoxon": {
+          "w_stat": 0.0,
+          "p_value": 0.0625
+        },
+        "cohens_d": -2.7816969434202505,
+        "effect_size": "large",
+        "diff_ci_95": [
+          -0.17977292646038823,
+          -0.04827495687556442
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GIN",
+        "metric": "auc_roc",
+        "mean_a": 0.8874149252377984,
+        "mean_b": 0.6610710480223878,
+        "diff": 0.2263438772154106,
+        "paired_ttest": {
+          "t_stat": 8.145511997317012,
+          "p_value": 0.0012360998117231688
+        },
+        "wilcoxon": {
+          "w_stat": 0.0,
+          "p_value": 0.0625
+        },
+        "cohens_d": 6.503616714598712,
+        "effect_size": "large",
+        "diff_ci_95": [
+          0.1491932511782491,
+          0.30349450325257205
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GIN",
+        "metric": "f1",
+        "mean_a": 0.8409020738839332,
+        "mean_b": 0.7880137106898996,
+        "diff": 0.05288836319403367,
+        "paired_ttest": {
+          "t_stat": 6.580411263154781,
+          "p_value": 0.002761010690160561
+        },
+        "wilcoxon": {
+          "w_stat": 0.0,
+          "p_value": 0.0625
+        },
+        "cohens_d": 1.6172904527904268,
+        "effect_size": "large",
+        "diff_ci_95": [
+          0.03057339970015639,
+          0.07520332668791099
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GIN",
+        "metric": "pr_auc",
+        "mean_a": 0.8990167107970579,
+        "mean_b": 0.6851921169984105,
+        "diff": 0.21382459379864738,
+        "paired_ttest": {
+          "t_stat": 11.753660564580432,
+          "p_value": 0.0002997686400300605
+        },
+        "wilcoxon": {
+          "w_stat": 0.0,
+          "p_value": 0.0625
+        },
+        "cohens_d": 8.016502925507776,
+        "effect_size": "large",
+        "diff_ci_95": [
+          0.16331503181485255,
+          0.26433415578244235
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs GIN",
+        "metric": "mcc",
+        "mean_a": 0.6457304073284501,
+        "mean_b": 0.4239336838946216,
+        "diff": 0.2217967234338285,
+        "paired_ttest": {
+          "t_stat": 14.591624768435201,
+          "p_value": 0.00012830962382032329
+        },
+        "wilcoxon": {
+          "w_stat": 0.0,
+          "p_value": 0.0625
+        },
+        "cohens_d": 3.883419575954975,
+        "effect_size": "large",
+        "diff_ci_95": [
+          0.1795939915996819,
+          0.263999455267975
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs MLP",
+        "metric": "auc_roc",
+        "mean_a": 0.8874149252377984,
+        "mean_b": 0.8576512234697239,
+        "diff": 0.029763701768074524,
+        "paired_ttest": {
+          "t_stat": 2.944004540537901,
+          "p_value": 0.04222044746720215
+        },
+        "wilcoxon": {
+          "w_stat": 1.0,
+          "p_value": 0.125
+        },
+        "cohens_d": 1.2467472660887604,
+        "effect_size": "large",
+        "diff_ci_95": [
+          0.0016940154110559602,
+          0.057833388125093046
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs MLP",
+        "metric": "f1",
+        "mean_a": 0.8409020738839332,
+        "mean_b": 0.8441451729804438,
+        "diff": -0.003243099096510549,
+        "paired_ttest": {
+          "t_stat": -0.34087579112775934,
+          "p_value": 0.7503489153606935
+        },
+        "wilcoxon": {
+          "w_stat": 6.0,
+          "p_value": 0.8125
+        },
+        "cohens_d": -0.1297975502026067,
+        "effect_size": "negligible",
+        "diff_ci_95": [
+          -0.029658253374227506,
+          0.023172055181206096
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs MLP",
+        "metric": "pr_auc",
+        "mean_a": 0.8990167107970579,
+        "mean_b": 0.8827241786253597,
+        "diff": 0.016292532171698237,
+        "paired_ttest": {
+          "t_stat": 1.4602694038303432,
+          "p_value": 0.21800008485450587
+        },
+        "wilcoxon": {
+          "w_stat": 3.0,
+          "p_value": 0.3125
+        },
+        "cohens_d": 0.5609713975859345,
+        "effect_size": "medium",
+        "diff_ci_95": [
+          -0.014684848495687616,
+          0.04726991283908409
+        ]
+      },
+      {
+        "comparison": "SubGNN+CSP vs MLP",
+        "metric": "mcc",
+        "mean_a": 0.6457304073284501,
+        "mean_b": 0.6037327460198678,
+        "diff": 0.04199766130858229,
+        "paired_ttest": {
+          "t_stat": 1.8842446250747533,
+          "p_value": 0.1326291706934621
+        },
+        "wilcoxon": {
+          "w_stat": 3.0,
+          "p_value": 0.3125
+        },
+        "cohens_d": 0.9571544439521955,
+        "effect_size": "large",
+        "diff_ci_95": [
+          -0.019886130009300305,
+          0.10388145262646467
+        ]
+      }
+    ]
+  }
+}

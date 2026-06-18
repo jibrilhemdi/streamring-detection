@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Comparison with baseline GNN models on subgraph-level fraud ring classification (mean $\pm$ std, $n=3$ runs).}
+\label{tab:baselines}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{MCC} \\
+\midrule
+MLP                  & 0.853$\pm$0.025 & 0.791$\pm$0.028 & 0.875$\pm$0.024 & 0.562$\pm$0.045 \\
+GCN                  & 0.769$\pm$0.036 & 0.730$\pm$0.048 & 0.769$\pm$0.045 & 0.438$\pm$0.073 \\
+GAT                  & 0.805$\pm$0.023 & 0.771$\pm$0.033 & 0.818$\pm$0.010 & 0.489$\pm$0.019 \\
+GraphSAGE            & 0.891$\pm$0.037 & 0.841$\pm$0.031 & 0.904$\pm$0.042 & 0.659$\pm$0.072 \\
+GIN                  & 0.653$\pm$0.036 & 0.731$\pm$0.023 & 0.617$\pm$0.059 & 0.368$\pm$0.041 \\
+\midrule
+\textbf{SubGNN+CSP (ours)} & \textbf{0.845}$\pm$0.015 & \textbf{0.791}$\pm$0.049 & \textbf{0.854}$\pm$0.030 & \textbf{0.574}$\pm$0.042 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,18 @@
+{
+  "test_results": {
+    "auc_roc": 0.887937005934232,
+    "f1": 0.8492316148159172,
+    "pr_auc": 0.9144101793901573,
+    "mcc": 0.6499201040498976
+  },
+  "test_results_std": {
+    "auc_roc": 0.0203,
+    "f1": 0.0196,
+    "pr_auc": 0.006,
+    "mcc": 0.03
+  },
+  "latency_p50_ms": 0.16458299796795473,
+  "num_subgraphs": 1294,
+  "num_runs": 5,
+  "note": "Updated to v3 ablation results (SubGNN + CSP-reg, 5 runs with position encoding). Per-run AUC: [0.8611, 0.8730, 0.9005, 0.9190, 0.8861]."
+}
