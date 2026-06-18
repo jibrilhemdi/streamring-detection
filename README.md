@@ -1,4 +1,4 @@
-# Finds2026 Workspace
+# Repository Workspace
 
 This workspace contains the StreamRing research artifact and its local Ethereum ETL dependency.
 
