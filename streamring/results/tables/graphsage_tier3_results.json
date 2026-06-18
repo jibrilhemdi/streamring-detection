@@ -1,52 +1,52 @@
 {
   "SubGNN+CSP": {
     "model": "SubGNN+CSP",
-    "throughput": 611.5,
-    "tier3_latency_p50": 8.858,
-    "tier3_latency_p99": 15.463,
+    "throughput": 314.5,
+    "tier3_latency_p50": 7.967,
+    "tier3_latency_p99": 16.971,
     "tier3_meets_target": true,
-    "detections": 1041,
-    "precision": 94.6,
+    "detections": 5156,
+    "precision": 97.3,
     "confusion": {
-      "tp": 985,
-      "fp": 56,
-      "tn": 46237,
-      "fn": 2132
+      "tp": 5019,
+      "fp": 137,
+      "tn": 40437,
+      "fn": 3817
     },
     "tier_distribution": {
-      "tier1_safe": 46312,
-      "tier2_suspicious": 1591,
-      "tier3_fraud": 1041,
-      "tier3_likely_fraud": 466
+      "tier1_safe": 40567,
+      "tier2_suspicious": 1575,
+      "tier3_fraud": 5156,
+      "tier3_likely_fraud": 2112
     },
-    "filter_rate_tier1": 93.73,
-    "filter_rate_tier12": 96.95
+    "filter_rate_tier1": 82.1,
+    "filter_rate_tier12": 85.29
   },
   "GraphSAGE": {
     "model": "GraphSAGE",
-    "throughput": 605.2,
-    "tier3_latency_p50": 8.866,
-    "tier3_latency_p99": 16.442,
+    "throughput": 253.0,
+    "tier3_latency_p50": 9.703,
+    "tier3_latency_p99": 23.436,
     "tier3_meets_target": true,
-    "detections": 1056,
-    "precision": 92.0,
+    "detections": 2503,
+    "precision": 97.8,
     "confusion": {
-      "tp": 971,
-      "fp": 85,
-      "tn": 46208,
-      "fn": 2146
+      "tp": 2449,
+      "fp": 54,
+      "tn": 40520,
+      "fn": 6387
     },
     "tier_distribution": {
-      "tier1_safe": 46312,
-      "tier2_suspicious": 1591,
-      "tier3_fraud": 1056,
-      "tier3_likely_fraud": 451
+      "tier1_safe": 40567,
+      "tier2_suspicious": 1575,
+      "tier3_fraud": 2503,
+      "tier3_likely_fraud": 4765
     },
-    "filter_rate_tier1": 93.73,
-    "filter_rate_tier12": 96.95
+    "filter_rate_tier1": 82.1,
+    "filter_rate_tier12": 85.29
   },
   "shared_config": {
-    "tier1_threshold": 0.5215483903884888,
+    "tier1_threshold": 0.41424560546875,
     "warmup_edges": 74115,
     "eval_edges": 49410,
     "train_subgraphs": 87,

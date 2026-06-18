@@ -38,8 +38,8 @@ F1-Score         & 0.1169 & 0.3174 & \textbf{0.8492} \\
 PR-AUC           & 0.1519 & 0.2280 & \textbf{0.9144} \\
 MCC              & 0.1718 & 0.3183 & \textbf{0.6499} \\
 \midrule
-Latency P50 (ms) & 0.069  & 19.426  & 8.014 \\
-Latency P99 (ms) & 0.285  & 26.331  & 15.456 \\
+Latency P50 (ms) & 0.385  & 31.619  & 22.089 \\
+Latency P99 (ms) & 1.484  & 43.700  & 46.964 \\
 Latency Target   & $<$5ms & $<$50ms & $<$500ms \\
 Status           & \cmark & \cmark & \cmark \\
 \bottomrule
@@ -54,10 +54,10 @@ Status           & \cmark & \cmark & \cmark \\
 \toprule
 \textbf{Configuration} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{MCC} \\
 \midrule
-SubGNN (supervised)            & 0.829$\pm$0.014 & 0.745$\pm$0.037 & 0.845$\pm$0.024 & 0.536$\pm$0.046 \\
-SubGNN + CSP-reg               & 0.846$\pm$0.014 & 0.790$\pm$0.051 & 0.853$\pm$0.030 & 0.579$\pm$0.039 \\
-SubGNN-small (baseline)        & 0.834$\pm$0.011 & 0.753$\pm$0.043 & 0.861$\pm$0.031 & 0.547$\pm$0.049 \\
-SubGNN-small + CSP-reg         & 0.840$\pm$0.032 & 0.749$\pm$0.042 & 0.866$\pm$0.041 & 0.548$\pm$0.057 \\
+SubGNN + CSP-reg               & 0.888$\pm$0.020 & 0.849$\pm$0.020 & 0.914$\pm$0.018 & 0.650$\pm$0.028 \\
+SubGNN (supervised)            & 0.876$\pm$0.022 & 0.847$\pm$0.033 & 0.894$\pm$0.025 & 0.633$\pm$0.066 \\
+SubGNN-small + CSP-reg         & 0.880$\pm$0.016 & 0.855$\pm$0.020 & 0.907$\pm$0.017 & 0.653$\pm$0.027 \\
+SubGNN-small (baseline)        & 0.887$\pm$0.021 & 0.862$\pm$0.018 & 0.901$\pm$0.028 & 0.655$\pm$0.040 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -72,12 +72,12 @@ SubGNN-small + CSP-reg         & 0.840$\pm$0.032 & 0.749$\pm$0.042 & 0.866$\pm$0
 \cmidrule(lr){2-3} \cmidrule(lr){4-5}
  & \textbf{No CSP} & \textbf{+CSP} & \textbf{No CSP} & \textbf{+CSP} \\
 \midrule
-       1\% & 0.621$\pm$0.075 & 0.593$\pm$0.045 & 0.601$\pm$0.135 & 0.563$\pm$0.083 \\
-       5\% & 0.686$\pm$0.018 & 0.714$\pm$0.031 & 0.653$\pm$0.092 & 0.681$\pm$0.069 \\
-      10\% & 0.736$\pm$0.028 & 0.748$\pm$0.017 & 0.688$\pm$0.052 & 0.696$\pm$0.055 \\
-      25\% & 0.799$\pm$0.019 & 0.774$\pm$0.026 & 0.700$\pm$0.043 & 0.694$\pm$0.043 \\
-      50\% & 0.805$\pm$0.012 & 0.808$\pm$0.023 & 0.688$\pm$0.024 & 0.696$\pm$0.055 \\
-     100\% & 0.822$\pm$0.006 & 0.833$\pm$0.010 & 0.711$\pm$0.011 & 0.717$\pm$0.030 \\
+       1\% & 0.673$\pm$0.031 & 0.676$\pm$0.057 & 0.795$\pm$0.009 & 0.789$\pm$0.024 \\
+       5\% & 0.759$\pm$0.045 & 0.741$\pm$0.045 & 0.740$\pm$0.045 & 0.713$\pm$0.041 \\
+      10\% & 0.772$\pm$0.017 & 0.779$\pm$0.033 & 0.779$\pm$0.024 & 0.750$\pm$0.035 \\
+      25\% & 0.825$\pm$0.020 & 0.832$\pm$0.013 & 0.826$\pm$0.025 & 0.795$\pm$0.045 \\
+      50\% & 0.827$\pm$0.017 & 0.852$\pm$0.017 & 0.813$\pm$0.019 & 0.844$\pm$0.018 \\
+     100\% & 0.853$\pm$0.010 & 0.867$\pm$0.008 & 0.843$\pm$0.022 & 0.843$\pm$0.026 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -108,14 +108,14 @@ all\_attacks $\to$ pre\_dao & 0.9266 & 0.1169 \\
 \toprule
 \textbf{Metric} & \textbf{Value} \\
 \midrule
-Throughput & 636.8 edges/sec \\
-Tier 1 Filter Rate & 93.7\% \\
-Tier 1+2 Filter Rate & 97.0\% \\
-Tier 1 Latency (P50 / P99) & 0.069 / 0.285ms \\
-Tier 2 Latency (P50 / P99) & 19.426 / 26.331ms \\
-Tier 3 Latency (P50 / P99) & 8.014 / 15.456ms \\
-Fraud Ring Detections & 1,039 \\
-Precision & 94.8\% \\
+Throughput & 101.1 edges/sec \\
+Tier 1 Filter Rate & 82.1\% \\
+Tier 1+2 Filter Rate & 85.3\% \\
+Tier 1 Latency (P50 / P99) & 0.385 / 1.484ms \\
+Tier 2 Latency (P50 / P99) & 31.619 / 43.700ms \\
+Tier 3 Latency (P50 / P99) & 22.089 / 46.964ms \\
+Fraud Ring Detections & 5,137 \\
+Precision & 97.4\% \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -128,13 +128,13 @@ Precision & 94.8\% \\
 \toprule
 \textbf{Model} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{MCC} \\
 \midrule
-MLP                  & 0.853$\pm$0.025 & 0.791$\pm$0.028 & 0.875$\pm$0.024 & 0.562$\pm$0.045 \\
-GCN                  & 0.769$\pm$0.036 & 0.730$\pm$0.048 & 0.769$\pm$0.045 & 0.438$\pm$0.073 \\
-GAT                  & 0.805$\pm$0.023 & 0.771$\pm$0.033 & 0.818$\pm$0.010 & 0.489$\pm$0.019 \\
-GraphSAGE            & 0.891$\pm$0.037 & 0.841$\pm$0.031 & 0.904$\pm$0.042 & 0.659$\pm$0.072 \\
-GIN                  & 0.653$\pm$0.036 & 0.731$\pm$0.023 & 0.617$\pm$0.059 & 0.368$\pm$0.041 \\
+MLP                  & 0.858$\pm$0.017 & 0.844$\pm$0.016 & 0.883$\pm$0.029 & 0.604$\pm$0.022 \\
+GCN                  & 0.849$\pm$0.039 & 0.822$\pm$0.047 & 0.863$\pm$0.052 & 0.595$\pm$0.072 \\
+GAT                  & 0.866$\pm$0.022 & 0.834$\pm$0.017 & 0.890$\pm$0.028 & 0.605$\pm$0.030 \\
+GraphSAGE            & 0.944$\pm$0.008 & 0.891$\pm$0.014 & 0.953$\pm$0.014 & 0.760$\pm$0.010 \\
+GIN                  & 0.661$\pm$0.036 & 0.788$\pm$0.031 & 0.685$\pm$0.025 & 0.424$\pm$0.051 \\
 \midrule
-SubGNN+CSP (ours)    & 0.845$\pm$0.015 & 0.791$\pm$0.049 & 0.854$\pm$0.030 & 0.574$\pm$0.042 \\
+SubGNN+CSP (ours)    & 0.887$\pm$0.025 & 0.841$\pm$0.027 & 0.899$\pm$0.023 & 0.646$\pm$0.051 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -147,12 +147,12 @@ SubGNN+CSP (ours)    & 0.845$\pm$0.015 & 0.791$\pm$0.049 & 0.854$\pm$0.030 & 0.5
 \toprule
 \textbf{Period} & \textbf{Rings} & \textbf{RDT} & \textbf{RDT (weighted)} \\
 \midrule
-DAO Hack             & 35  & 1.000 & 1.000 \\
-Pre-DAO              & 99  & 0.878 & 0.974 \\
-51\% Attack v1       & 20  & 1.000 & 1.000 \\
-51\% Attack v2       & 24  & 1.000 & 1.000 \\
+DAO Hack             & 37  & 1.000 & 0.986 \\
+Pre-DAO              & 74  & 0.970 & 0.979 \\
+51\% Attack v1       & 29  & 1.000 & 1.000 \\
+51\% Attack v2       & 26  & 1.000 & 1.000 \\
 \midrule
-\textbf{Aggregate} & \textbf{178} & \textbf{0.969} & \textbf{0.994} \\
+\textbf{Aggregate} & \textbf{166} & \textbf{0.992} & \textbf{0.991} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -165,10 +165,10 @@ Pre-DAO              & 99  & 0.878 & 0.974 \\
 \toprule
 \textbf{Model} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{MCC} \\
 \midrule
-EvolveGCN-H               & 0.833$\pm$0.036 & 0.779$\pm$0.011 & 0.844$\pm$0.028 & 0.528$\pm$0.054 \\
-T-GCN                     & 0.804$\pm$0.023 & 0.729$\pm$0.043 & 0.837$\pm$0.026 & 0.504$\pm$0.045 \\
-Snapshot-GCN              & 0.832$\pm$0.015 & 0.767$\pm$0.051 & 0.852$\pm$0.020 & 0.510$\pm$0.047 \\
-SubGNN+CSP (ours)         & \textbf{0.820}$\pm$0.023 & \textbf{0.772}$\pm$0.058 & \textbf{0.855}$\pm$0.019 & \textbf{0.526}$\pm$0.032 \\
+EvolveGCN-H               & 0.843$\pm$0.028 & 0.813$\pm$0.015 & 0.849$\pm$0.042 & 0.575$\pm$0.027 \\
+T-GCN                     & 0.835$\pm$0.016 & 0.813$\pm$0.025 & 0.855$\pm$0.028 & 0.559$\pm$0.042 \\
+Snapshot-GCN              & 0.843$\pm$0.023 & 0.840$\pm$0.040 & 0.850$\pm$0.035 & 0.618$\pm$0.052 \\
+SubGNN+CSP (ours)         & \textbf{0.888}$\pm$0.014 & \textbf{0.849}$\pm$0.025 & \textbf{0.902}$\pm$0.029 & \textbf{0.652}$\pm$0.009 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -182,15 +182,15 @@ SubGNN+CSP (ours)         & \textbf{0.820}$\pm$0.023 & \textbf{0.772}$\pm$0.058 
 \toprule
 \textbf{Augmentation} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{MCC} \\
 \midrule
-Feature Masking (default) & 0.845$\pm$0.018 & 0.778$\pm$0.042 & 0.869$\pm$0.018 & 0.565$\pm$0.040 \\
-Edge Dropout (10%) & 0.842$\pm$0.010 & 0.776$\pm$0.035 & 0.863$\pm$0.027 & 0.554$\pm$0.029 \\
-Edge Dropout (20%) & 0.813$\pm$0.019 & 0.745$\pm$0.017 & 0.842$\pm$0.017 & 0.498$\pm$0.049 \\
-Node Dropout (10%) & 0.841$\pm$0.006 & 0.777$\pm$0.044 & 0.857$\pm$0.013 & 0.559$\pm$0.034 \\
-Subgraph Crop (80%) & 0.848$\pm$0.016 & 0.770$\pm$0.052 & 0.859$\pm$0.021 & 0.577$\pm$0.036 \\
-Feat Mask + Edge Drop & 0.836$\pm$0.004 & 0.766$\pm$0.045 & 0.864$\pm$0.005 & 0.543$\pm$0.008 \\
-Feat Mask + Node Drop & 0.834$\pm$0.015 & 0.761$\pm$0.041 & 0.858$\pm$0.027 & 0.523$\pm$0.033 \\
-Identity (CSP, no aug) & 0.829$\pm$0.010 & 0.766$\pm$0.045 & 0.847$\pm$0.013 & 0.532$\pm$0.036 \\
-No CSP (supervised) & 0.837$\pm$0.013 & 0.713$\pm$0.027 & 0.869$\pm$0.013 & 0.556$\pm$0.008 \\
+Feature Masking (default) & 0.893$\pm$0.011 & 0.829$\pm$0.010 & 0.912$\pm$0.018 & 0.649$\pm$0.013 \\
+Edge Dropout (10%) & 0.860$\pm$0.011 & 0.821$\pm$0.007 & 0.886$\pm$0.008 & 0.610$\pm$0.025 \\
+Edge Dropout (20%) & 0.852$\pm$0.016 & 0.810$\pm$0.016 & 0.877$\pm$0.016 & 0.579$\pm$0.043 \\
+Node Dropout (10%) & 0.874$\pm$0.004 & 0.826$\pm$0.011 & 0.897$\pm$0.012 & 0.616$\pm$0.013 \\
+Subgraph Crop (80%) & 0.873$\pm$0.023 & 0.817$\pm$0.003 & 0.898$\pm$0.030 & 0.621$\pm$0.024 \\
+Feat Mask + Edge Drop & 0.874$\pm$0.023 & 0.827$\pm$0.018 & 0.898$\pm$0.032 & 0.622$\pm$0.016 \\
+Feat Mask + Node Drop & 0.884$\pm$0.006 & 0.811$\pm$0.008 & 0.914$\pm$0.002 & 0.637$\pm$0.011 \\
+Identity (CSP, no aug) & 0.876$\pm$0.024 & 0.825$\pm$0.038 & 0.895$\pm$0.025 & 0.625$\pm$0.052 \\
+No CSP (supervised) & 0.870$\pm$0.010 & 0.808$\pm$0.018 & 0.900$\pm$0.011 & 0.612$\pm$0.027 \\
 \bottomrule
 \end{tabular}%
 }
@@ -204,8 +204,8 @@ No CSP (supervised) & 0.837$\pm$0.013 & 0.713$\pm$0.027 & 0.869$\pm$0.013 & 0.55
 \toprule
 \textbf{Model} & \textbf{AUC-ROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{MCC} \\
 \midrule
-LSTM-BiLSTM          & 0.828$\pm$0.023 & \textbf{0.771}$\pm$0.040 & 0.818$\pm$0.017 & \textbf{0.543}$\pm$0.050 \\
-SubGNN+CSP (ours)    & 0.846$\pm$0.014 & 0.790$\pm$0.051 & \textbf{0.853}$\pm$0.030 & 0.579$\pm$0.039 \\
+LSTM-BiLSTM          & 0.894$\pm$0.028 & \textbf{0.865}$\pm$0.016 & 0.901$\pm$0.032 & \textbf{0.698}$\pm$0.039 \\
+SubGNN+CSP (ours)    & 0.888$\pm$0.020 & 0.849$\pm$0.020 & \textbf{0.914}$\pm$0.018 & 0.650$\pm$0.028 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -218,12 +218,12 @@ SubGNN+CSP (ours)    & 0.846$\pm$0.014 & 0.790$\pm$0.051 & \textbf{0.853}$\pm$0.
 \toprule
 \textbf{Metric} & \textbf{SubGNN+CSP} & \textbf{GraphSAGE} \\
 \midrule
-Tier 3 Latency P50 (ms)  & 8.858  & 8.866 \\
-Tier 3 Latency P99 (ms)  & 15.463 & 16.442 \\
+Tier 3 Latency P50 (ms)  & 7.967  & 9.703 \\
+Tier 3 Latency P99 (ms)  & 16.971 & 23.436 \\
 Meets $<$500ms target     & \cmark & \cmark \\
-Throughput (edges/s)      & 611.5  & 605.2 \\
-Detections                & 1,041  & 1,056 \\
-Precision (\%)            & 94.6   & 92.0  \\
+Throughput (edges/s)      & 314.5  & 253.0 \\
+Detections                & 5,156  & 2,503 \\
+Precision (\%)            & 97.3   & 97.8  \\
 \bottomrule
 \end{tabular}
 \end{table}

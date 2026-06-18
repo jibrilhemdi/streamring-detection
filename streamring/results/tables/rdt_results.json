@@ -1,20 +1,20 @@
 {
   "dao_hack": {
     "rdt": 1.0,
-    "rdt_weighted": 1.0,
-    "num_rings": 35,
-    "total_ring_members": 138,
-    "detection_coverage": 0.9478672985781991,
-    "total_edges_flagged": 10262,
-    "xgboost_threshold": 0.5215483903884888,
+    "rdt_weighted": 0.9857448405319493,
+    "num_rings": 37,
+    "total_ring_members": 144,
+    "detection_coverage": 0.9483568075117371,
+    "total_edges_flagged": 22358,
+    "xgboost_threshold": 0.41424560546875,
     "method": "actual_xgboost_predictions",
-    "ring_detections": 136,
+    "ring_detections": 137,
     "per_ring_all": [
       {
         "ring_id": 0,
         "members": 8,
-        "detected_before_completion": 8,
-        "rdt": 1.0
+        "detected_before_completion": 7,
+        "rdt": 0.875
       },
       {
         "ring_id": 1,
@@ -54,14 +54,14 @@
       },
       {
         "ring_id": 7,
-        "members": 5,
-        "detected_before_completion": 4,
-        "rdt": 0.8
+        "members": 6,
+        "detected_before_completion": 6,
+        "rdt": 1.0
       },
       {
         "ring_id": 8,
-        "members": 6,
-        "detected_before_completion": 6,
+        "members": 4,
+        "detected_before_completion": 4,
         "rdt": 1.0
       },
       {
@@ -72,8 +72,8 @@
       },
       {
         "ring_id": 10,
-        "members": 2,
-        "detected_before_completion": 2,
+        "members": 4,
+        "detected_before_completion": 4,
         "rdt": 1.0
       },
       {
@@ -84,20 +84,20 @@
       },
       {
         "ring_id": 12,
-        "members": 4,
-        "detected_before_completion": 4,
-        "rdt": 1.0
+        "members": 3,
+        "detected_before_completion": 2,
+        "rdt": 0.6666666666666666
       },
       {
         "ring_id": 13,
-        "members": 4,
-        "detected_before_completion": 4,
+        "members": 3,
+        "detected_before_completion": 3,
         "rdt": 1.0
       },
       {
         "ring_id": 14,
-        "members": 3,
-        "detected_before_completion": 3,
+        "members": 5,
+        "detected_before_completion": 5,
         "rdt": 1.0
       },
       {
@@ -108,8 +108,8 @@
       },
       {
         "ring_id": 16,
-        "members": 5,
-        "detected_before_completion": 5,
+        "members": 4,
+        "detected_before_completion": 4,
         "rdt": 1.0
       },
       {
@@ -120,15 +120,15 @@
       },
       {
         "ring_id": 18,
-        "members": 4,
-        "detected_before_completion": 4,
-        "rdt": 1.0
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 19,
-        "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
+        "members": 4,
+        "detected_before_completion": 4,
+        "rdt": 1.0
       },
       {
         "ring_id": 20,
@@ -163,8 +163,8 @@
       {
         "ring_id": 25,
         "members": 7,
-        "detected_before_completion": 7,
-        "rdt": 1.0
+        "detected_before_completion": 6,
+        "rdt": 0.8571428571428571
       },
       {
         "ring_id": 26,
@@ -180,42 +180,54 @@
       },
       {
         "ring_id": 28,
-        "members": 5,
-        "detected_before_completion": 5,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 29,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 30,
         "members": 4,
         "detected_before_completion": 4,
         "rdt": 1.0
       },
       {
-        "ring_id": 31,
-        "members": 2,
-        "detected_before_completion": 2,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 32,
+        "ring_id": 29,
         "members": 5,
         "detected_before_completion": 5,
         "rdt": 1.0
       },
       {
-        "ring_id": 33,
+        "ring_id": 30,
         "members": 3,
         "detected_before_completion": 3,
         "rdt": 1.0
       },
       {
+        "ring_id": 31,
+        "members": 4,
+        "detected_before_completion": 3,
+        "rdt": 0.75
+      },
+      {
+        "ring_id": 32,
+        "members": 2,
+        "detected_before_completion": 2,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 33,
+        "members": 5,
+        "detected_before_completion": 5,
+        "rdt": 1.0
+      },
+      {
         "ring_id": 34,
+        "members": 3,
+        "detected_before_completion": 3,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 35,
+        "members": 2,
+        "detected_before_completion": 2,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 36,
         "members": 2,
         "detected_before_completion": 2,
         "rdt": 1.0
@@ -223,15 +235,15 @@
     ]
   },
   "pre_dao": {
-    "rdt": 0.8776978417266187,
-    "rdt_weighted": 0.9740478324357364,
-    "num_rings": 99,
-    "total_ring_members": 361,
-    "detection_coverage": 0.6929982046678635,
-    "total_edges_flagged": 282498,
-    "xgboost_threshold": 0.38695719838142395,
+    "rdt": 0.9698492462311558,
+    "rdt_weighted": 0.9792848193805738,
+    "num_rings": 74,
+    "total_ring_members": 423,
+    "detection_coverage": 0.47602131438721135,
+    "total_edges_flagged": 604406,
+    "xgboost_threshold": 0.35494139790534973,
     "method": "actual_xgboost_predictions",
-    "ring_detections": 278,
+    "ring_detections": 199,
     "per_ring_all": [
       {
         "ring_id": 0,
@@ -241,9 +253,9 @@
       },
       {
         "ring_id": 1,
-        "members": 10,
-        "detected_before_completion": 8,
-        "rdt": 0.8
+        "members": 168,
+        "detected_before_completion": 135,
+        "rdt": 0.8035714285714286
       },
       {
         "ring_id": 2,
@@ -253,9 +265,9 @@
       },
       {
         "ring_id": 3,
-        "members": 14,
-        "detected_before_completion": 14,
-        "rdt": 1.0
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 4,
@@ -265,253 +277,253 @@
       },
       {
         "ring_id": 5,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
+        "members": 5,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 6,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 7,
-        "members": 5,
-        "detected_before_completion": 4,
-        "rdt": 0.8
-      },
-      {
-        "ring_id": 8,
         "members": 4,
         "detected_before_completion": 0,
         "rdt": 0.0
+      },
+      {
+        "ring_id": 7,
+        "members": 7,
+        "detected_before_completion": 7,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 8,
+        "members": 6,
+        "detected_before_completion": 2,
+        "rdt": 0.3333333333333333
       },
       {
         "ring_id": 9,
         "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 10,
+        "members": 4,
+        "detected_before_completion": 2,
+        "rdt": 0.5
+      },
+      {
+        "ring_id": 11,
         "members": 3,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
       {
-        "ring_id": 11,
-        "members": 6,
-        "detected_before_completion": 5,
-        "rdt": 0.8333333333333334
-      },
-      {
         "ring_id": 12,
         "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 13,
-        "members": 4,
-        "detected_before_completion": 4,
-        "rdt": 1.0
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 14,
         "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 15,
-        "members": 4,
-        "detected_before_completion": 4,
+        "members": 2,
+        "detected_before_completion": 2,
         "rdt": 1.0
       },
       {
         "ring_id": 16,
         "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 17,
-        "members": 4,
-        "detected_before_completion": 4,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 18,
-        "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
-      },
-      {
-        "ring_id": 19,
         "members": 3,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
       {
+        "ring_id": 18,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 19,
+        "members": 5,
+        "detected_before_completion": 2,
+        "rdt": 0.4
+      },
+      {
         "ring_id": 20,
         "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 21,
         "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 22,
-        "members": 16,
-        "detected_before_completion": 16,
-        "rdt": 1.0
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 23,
-        "members": 3,
+        "members": 5,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
       {
         "ring_id": 24,
-        "members": 5,
-        "detected_before_completion": 4,
-        "rdt": 0.8
+        "members": 2,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 25,
         "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
+        "detected_before_completion": 2,
+        "rdt": 0.6666666666666666
       },
       {
         "ring_id": 26,
-        "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
+        "members": 6,
+        "detected_before_completion": 3,
+        "rdt": 0.5
       },
       {
         "ring_id": 27,
         "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 28,
         "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 29,
-        "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
+        "members": 4,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 30,
-        "members": 4,
+        "members": 3,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
       {
         "ring_id": 31,
-        "members": 5,
-        "detected_before_completion": 3,
-        "rdt": 0.6
+        "members": 4,
+        "detected_before_completion": 1,
+        "rdt": 0.25
       },
       {
         "ring_id": 32,
-        "members": 2,
+        "members": 3,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
       {
         "ring_id": 33,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
+        "members": 5,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 34,
         "members": 3,
-        "detected_before_completion": 1,
-        "rdt": 0.3333333333333333
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 35,
-        "members": 6,
-        "detected_before_completion": 6,
-        "rdt": 1.0
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 36,
-        "members": 2,
-        "detected_before_completion": 2,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 37,
-        "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
-      },
-      {
-        "ring_id": 38,
-        "members": 3,
-        "detected_before_completion": 0,
-        "rdt": 0.0
-      },
-      {
-        "ring_id": 39,
-        "members": 4,
-        "detected_before_completion": 0,
-        "rdt": 0.0
-      },
-      {
-        "ring_id": 40,
-        "members": 2,
-        "detected_before_completion": 2,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 41,
-        "members": 2,
-        "detected_before_completion": 2,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 42,
-        "members": 4,
-        "detected_before_completion": 4,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 43,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 44,
         "members": 4,
         "detected_before_completion": 3,
         "rdt": 0.75
       },
       {
-        "ring_id": 45,
+        "ring_id": 37,
         "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 38,
+        "members": 8,
+        "detected_before_completion": 8,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 39,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 40,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 41,
+        "members": 4,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 42,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 43,
+        "members": 5,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 44,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 45,
+        "members": 4,
         "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
+        "rdt": 0.5
       },
       {
         "ring_id": 46,
-        "members": 5,
+        "members": 3,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
@@ -523,15 +535,15 @@
       },
       {
         "ring_id": 48,
-        "members": 3,
-        "detected_before_completion": 3,
+        "members": 2,
+        "detected_before_completion": 2,
         "rdt": 1.0
       },
       {
         "ring_id": 49,
-        "members": 4,
-        "detected_before_completion": 3,
-        "rdt": 0.75
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 50,
@@ -541,9 +553,9 @@
       },
       {
         "ring_id": 51,
-        "members": 8,
-        "detected_before_completion": 8,
-        "rdt": 1.0
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 52,
@@ -560,114 +572,114 @@
       {
         "ring_id": 54,
         "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 55,
-        "members": 4,
-        "detected_before_completion": 4,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 56,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 57,
-        "members": 5,
-        "detected_before_completion": 2,
-        "rdt": 0.4
-      },
-      {
-        "ring_id": 58,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 59,
         "members": 3,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
       {
+        "ring_id": 56,
+        "members": 2,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 57,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 58,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 59,
+        "members": 2,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
         "ring_id": 60,
-        "members": 4,
-        "detected_before_completion": 3,
-        "rdt": 0.75
+        "members": 8,
+        "detected_before_completion": 8,
+        "rdt": 1.0
       },
       {
         "ring_id": 61,
-        "members": 3,
+        "members": 4,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
       {
         "ring_id": 62,
         "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 63,
-        "members": 2,
-        "detected_before_completion": 2,
-        "rdt": 1.0
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 64,
         "members": 3,
-        "detected_before_completion": 0,
-        "rdt": 0.0
+        "detected_before_completion": 2,
+        "rdt": 0.6666666666666666
       },
       {
         "ring_id": 65,
         "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
+        "detected_before_completion": 3,
+        "rdt": 1.0
       },
       {
         "ring_id": 66,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 67,
-        "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
-      },
-      {
-        "ring_id": 68,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 69,
-        "members": 4,
-        "detected_before_completion": 4,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 70,
         "members": 3,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
       {
-        "ring_id": 71,
+        "ring_id": 67,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 68,
+        "members": 4,
+        "detected_before_completion": 3,
+        "rdt": 0.75
+      },
+      {
+        "ring_id": 69,
+        "members": 5,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 70,
         "members": 3,
         "detected_before_completion": 3,
         "rdt": 1.0
       },
       {
+        "ring_id": 71,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
         "ring_id": 72,
-        "members": 2,
+        "members": 3,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
@@ -676,314 +688,31 @@
         "members": 3,
         "detected_before_completion": 0,
         "rdt": 0.0
-      },
-      {
-        "ring_id": 74,
-        "members": 3,
-        "detected_before_completion": 0,
-        "rdt": 0.0
-      },
-      {
-        "ring_id": 75,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 76,
-        "members": 2,
-        "detected_before_completion": 2,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 77,
-        "members": 8,
-        "detected_before_completion": 6,
-        "rdt": 0.75
-      },
-      {
-        "ring_id": 78,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 79,
-        "members": 4,
-        "detected_before_completion": 4,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 80,
-        "members": 4,
-        "detected_before_completion": 0,
-        "rdt": 0.0
-      },
-      {
-        "ring_id": 81,
-        "members": 3,
-        "detected_before_completion": 0,
-        "rdt": 0.0
-      },
-      {
-        "ring_id": 82,
-        "members": 2,
-        "detected_before_completion": 2,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 83,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 84,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 85,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 86,
-        "members": 3,
-        "detected_before_completion": 0,
-        "rdt": 0.0
-      },
-      {
-        "ring_id": 87,
-        "members": 3,
-        "detected_before_completion": 0,
-        "rdt": 0.0
-      },
-      {
-        "ring_id": 88,
-        "members": 4,
-        "detected_before_completion": 4,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 89,
-        "members": 5,
-        "detected_before_completion": 0,
-        "rdt": 0.0
-      },
-      {
-        "ring_id": 90,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 91,
-        "members": 2,
-        "detected_before_completion": 2,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 92,
-        "members": 2,
-        "detected_before_completion": 2,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 93,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 94,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 95,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 96,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 97,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 98,
-        "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
       }
     ]
   },
   "attack_51_v1": {
     "rdt": 1.0,
     "rdt_weighted": 1.0,
-    "num_rings": 20,
-    "total_ring_members": 65,
-    "detection_coverage": 0.6885813148788927,
-    "total_edges_flagged": 69675,
-    "xgboost_threshold": 0.5246046781539917,
+    "num_rings": 29,
+    "total_ring_members": 173,
+    "detection_coverage": 0.7003484320557491,
+    "total_edges_flagged": 256847,
+    "xgboost_threshold": 0.613534688949585,
     "method": "actual_xgboost_predictions",
-    "ring_detections": 65,
+    "ring_detections": 125,
     "per_ring_all": [
       {
         "ring_id": 0,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
+        "members": 96,
+        "detected_before_completion": 94,
+        "rdt": 0.9791666666666666
       },
       {
         "ring_id": 1,
         "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 2,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 3,
-        "members": 5,
-        "detected_before_completion": 5,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 4,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 5,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 6,
-        "members": 5,
-        "detected_before_completion": 5,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 7,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 8,
-        "members": 5,
-        "detected_before_completion": 5,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 9,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 10,
-        "members": 4,
-        "detected_before_completion": 4,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 11,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 12,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 13,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 14,
-        "members": 4,
-        "detected_before_completion": 4,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 15,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 16,
-        "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 17,
-        "members": 2,
-        "detected_before_completion": 2,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 18,
-        "members": 2,
-        "detected_before_completion": 2,
-        "rdt": 1.0
-      },
-      {
-        "ring_id": 19,
-        "members": 2,
-        "detected_before_completion": 2,
-        "rdt": 1.0
-      }
-    ]
-  },
-  "attack_51_v2": {
-    "rdt": 1.0,
-    "rdt_weighted": 1.0,
-    "num_rings": 24,
-    "total_ring_members": 131,
-    "detection_coverage": 0.5389221556886228,
-    "total_edges_flagged": 395131,
-    "xgboost_threshold": 0.2821540832519531,
-    "method": "actual_xgboost_predictions",
-    "ring_detections": 76,
-    "per_ring_all": [
-      {
-        "ring_id": 0,
-        "members": 14,
-        "detected_before_completion": 11,
-        "rdt": 0.7857142857142857
-      },
-      {
-        "ring_id": 1,
-        "members": 28,
-        "detected_before_completion": 22,
-        "rdt": 0.7857142857142857
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 2,
@@ -993,19 +722,19 @@
       },
       {
         "ring_id": 3,
-        "members": 14,
-        "detected_before_completion": 14,
-        "rdt": 1.0
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 4,
-        "members": 3,
-        "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
+        "members": 5,
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 5,
-        "members": 4,
+        "members": 3,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
@@ -1017,73 +746,73 @@
       },
       {
         "ring_id": 7,
-        "members": 5,
-        "detected_before_completion": 5,
+        "members": 2,
+        "detected_before_completion": 2,
         "rdt": 1.0
       },
       {
         "ring_id": 8,
-        "members": 4,
-        "detected_before_completion": 0,
-        "rdt": 0.0
+        "members": 2,
+        "detected_before_completion": 2,
+        "rdt": 1.0
       },
       {
         "ring_id": 9,
-        "members": 4,
+        "members": 3,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
       {
         "ring_id": 10,
-        "members": 4,
-        "detected_before_completion": 4,
+        "members": 2,
+        "detected_before_completion": 2,
         "rdt": 1.0
       },
       {
         "ring_id": 11,
-        "members": 3,
+        "members": 5,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
       {
         "ring_id": 12,
-        "members": 5,
-        "detected_before_completion": 0,
-        "rdt": 0.0
-      },
-      {
-        "ring_id": 13,
-        "members": 3,
-        "detected_before_completion": 0,
-        "rdt": 0.0
-      },
-      {
-        "ring_id": 14,
-        "members": 5,
-        "detected_before_completion": 4,
-        "rdt": 0.8
-      },
-      {
-        "ring_id": 15,
-        "members": 5,
-        "detected_before_completion": 5,
+        "members": 2,
+        "detected_before_completion": 2,
         "rdt": 1.0
       },
       {
-        "ring_id": 16,
+        "ring_id": 13,
+        "members": 2,
+        "detected_before_completion": 2,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 14,
+        "members": 4,
+        "detected_before_completion": 2,
+        "rdt": 0.5
+      },
+      {
+        "ring_id": 15,
         "members": 3,
-        "detected_before_completion": 0,
-        "rdt": 0.0
+        "detected_before_completion": 1,
+        "rdt": 0.3333333333333333
+      },
+      {
+        "ring_id": 16,
+        "members": 2,
+        "detected_before_completion": 2,
+        "rdt": 1.0
       },
       {
         "ring_id": 17,
-        "members": 3,
+        "members": 2,
         "detected_before_completion": 2,
-        "rdt": 0.6666666666666666
+        "rdt": 1.0
       },
       {
         "ring_id": 18,
-        "members": 4,
+        "members": 3,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
@@ -1095,34 +824,233 @@
       },
       {
         "ring_id": 20,
+        "members": 2,
+        "detected_before_completion": 2,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 21,
+        "members": 2,
+        "detected_before_completion": 2,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 22,
+        "members": 4,
+        "detected_before_completion": 3,
+        "rdt": 0.75
+      },
+      {
+        "ring_id": 23,
+        "members": 2,
+        "detected_before_completion": 2,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 24,
         "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 25,
+        "members": 3,
+        "detected_before_completion": 1,
+        "rdt": 0.3333333333333333
+      },
+      {
+        "ring_id": 26,
+        "members": 2,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 27,
+        "members": 2,
+        "detected_before_completion": 2,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 28,
+        "members": 2,
+        "detected_before_completion": 2,
+        "rdt": 1.0
+      }
+    ]
+  },
+  "attack_51_v2": {
+    "rdt": 1.0,
+    "rdt_weighted": 1.0,
+    "num_rings": 26,
+    "total_ring_members": 136,
+    "detection_coverage": 0.5568862275449101,
+    "total_edges_flagged": 409693,
+    "xgboost_threshold": 0.302948921918869,
+    "method": "actual_xgboost_predictions",
+    "ring_detections": 78,
+    "per_ring_all": [
+      {
+        "ring_id": 0,
+        "members": 18,
+        "detected_before_completion": 16,
+        "rdt": 0.8888888888888888
+      },
+      {
+        "ring_id": 1,
+        "members": 25,
+        "detected_before_completion": 19,
+        "rdt": 0.76
+      },
+      {
+        "ring_id": 2,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 3,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 4,
+        "members": 4,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 5,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 6,
+        "members": 5,
+        "detected_before_completion": 5,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 7,
+        "members": 4,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 8,
+        "members": 4,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 9,
+        "members": 5,
+        "detected_before_completion": 5,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 10,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 11,
+        "members": 6,
+        "detected_before_completion": 6,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 12,
+        "members": 2,
+        "detected_before_completion": 2,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 13,
+        "members": 5,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 14,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 15,
+        "members": 5,
+        "detected_before_completion": 4,
+        "rdt": 0.8
+      },
+      {
+        "ring_id": 16,
+        "members": 5,
+        "detected_before_completion": 5,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 17,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 18,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 19,
+        "members": 9,
+        "detected_before_completion": 9,
+        "rdt": 1.0
+      },
+      {
+        "ring_id": 20,
+        "members": 4,
         "detected_before_completion": 0,
         "rdt": 0.0
       },
       {
         "ring_id": 21,
         "members": 3,
-        "detected_before_completion": 3,
-        "rdt": 1.0
+        "detected_before_completion": 0,
+        "rdt": 0.0
       },
       {
         "ring_id": 22,
+        "members": 3,
+        "detected_before_completion": 0,
+        "rdt": 0.0
+      },
+      {
+        "ring_id": 23,
+        "members": 3,
+        "detected_before_completion": 2,
+        "rdt": 0.6666666666666666
+      },
+      {
+        "ring_id": 24,
         "members": 3,
         "detected_before_completion": 3,
         "rdt": 1.0
       },
       {
-        "ring_id": 23,
+        "ring_id": 25,
         "members": 2,
-        "detected_before_completion": 1,
-        "rdt": 0.5
+        "detected_before_completion": 2,
+        "rdt": 1.0
       }
     ]
   },
   "aggregate": {
-    "rdt_mean": 0.9694244604316546,
-    "rdt_weighted_mean": 0.9935119581089341,
-    "total_rings": 178,
+    "rdt_mean": 0.992462311557789,
+    "rdt_weighted_mean": 0.9912574149781308,
+    "total_rings": 166,
     "periods_with_rings": [
       "dao_hack",
       "pre_dao",
@@ -1130,18 +1058,18 @@
       "attack_51_v2"
     ],
     "method": "actual_xgboost_predictions",
-    "ring_count_detection_rate": 0.7808988764044944,
-    "ring_count_detected": 139,
-    "ring_count_total": 178,
-    "small_ring_rate": 0.7543859649122807,
+    "ring_count_detection_rate": 0.5060240963855421,
+    "ring_count_detected": 84,
+    "ring_count_total": 166,
+    "small_ring_rate": 0.38317757009345793,
     "small_ring_stats": {
-      "total": 114,
-      "detected": 86
+      "total": 107,
+      "detected": 41
     },
-    "large_ring_rate": 0.9090909090909091,
+    "large_ring_rate": 0.7575757575757576,
     "large_ring_stats": {
       "total": 33,
-      "detected": 30
+      "detected": 25
     }
   }
 }

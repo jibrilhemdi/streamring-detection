@@ -1,44 +1,44 @@
 {
-  "throughput": 636.8,
+  "throughput": 101.1,
   "total_eval_edges": 49410,
-  "elapsed_seconds": 77.6,
+  "elapsed_seconds": 488.8,
   "tier_distribution": {
-    "tier1_safe": 46312,
-    "tier2_suspicious": 1591,
-    "tier3_fraud": 1039,
-    "tier3_likely_fraud": 468
+    "tier1_safe": 40567,
+    "tier2_suspicious": 1575,
+    "tier3_fraud": 5137,
+    "tier3_likely_fraud": 2131
   },
   "filter_rates": {
-    "tier1": 93.73,
-    "tier1_2": 96.95
+    "tier1": 82.1,
+    "tier1_2": 85.29
   },
   "latency": {
-    "tier1_p50": 0.069,
-    "tier1_p99": 0.285,
-    "tier2_p50": 19.426,
-    "tier2_p99": 26.331,
-    "tier3_p50": 8.014,
-    "tier3_p99": 15.456
+    "tier1_p50": 0.385,
+    "tier1_p99": 1.484,
+    "tier2_p50": 31.619,
+    "tier2_p99": 43.7,
+    "tier3_p50": 22.089,
+    "tier3_p99": 46.964
   },
   "latency_targets": {
     "tier1_met": true,
     "tier2_met": true,
     "tier3_met": true
   },
-  "detections": 1039,
-  "true_positives": 985,
-  "false_positives": 54,
-  "precision": 94.8,
+  "detections": 5137,
+  "true_positives": 5004,
+  "false_positives": 133,
+  "precision": 97.4,
   "confusion": {
-    "tp": 985,
-    "fp": 54,
-    "tn": 46239,
-    "fn": 2132
+    "tp": 5004,
+    "fp": 133,
+    "tn": 40441,
+    "fn": 3832
   },
-  "tier1_threshold": 0.5215,
+  "tier1_threshold": 0.4142,
   "counts": {
     "tier1_edges": 49410,
-    "tier2_edges": 3098,
-    "tier3_edges": 1507
+    "tier2_edges": 8843,
+    "tier3_edges": 7268
   }
 }

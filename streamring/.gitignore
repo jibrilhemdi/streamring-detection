@@ -37,8 +37,11 @@ models/
 !models/.gitkeep
 
 # Experiment outputs that can be regenerated
+results_1
 results/archive/
 notebooks/*.ipynb_checkpoints/
+
+paper
 
 # Environment and secrets
 .env

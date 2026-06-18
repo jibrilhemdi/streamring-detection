@@ -1,57 +1,57 @@
 {
   "SubGNN+CSP": {
     "model": "SubGNN+CSP",
-    "throughput": 627.4,
-    "tier3_latency_p50": 8.781,
-    "tier3_latency_p99": 16.221,
+    "throughput": 341.5,
+    "tier3_latency_p50": 2.749,
+    "tier3_latency_p99": 4.422,
     "tier3_meets_target": true,
-    "detections": 391,
-    "precision": 79.5,
+    "detections": 0,
+    "precision": 0.0,
     "confusion": {
-      "tp": 311,
-      "fp": 80,
-      "tn": 46213,
-      "fn": 2806
+      "tp": 0,
+      "fp": 0,
+      "tn": 18,
+      "fn": 6
     },
     "tier_distribution": {
-      "tier1_safe": 46312,
-      "tier2_suspicious": 1855,
-      "tier3_fraud": 391,
-      "tier3_likely_fraud": 852
+      "tier1_safe": 0,
+      "tier2_suspicious": 0,
+      "tier3_fraud": 0,
+      "tier3_likely_fraud": 24
     },
-    "filter_rate_tier1": 93.73,
-    "filter_rate_tier12": 97.48
+    "filter_rate_tier1": 0.0,
+    "filter_rate_tier12": 0.0
   },
   "LSTM-BiLSTM": {
     "model": "LSTM-BiLSTM",
-    "throughput": 626.8,
-    "tier3_latency_p50": 8.515,
-    "tier3_latency_p99": 14.94,
+    "throughput": 487.9,
+    "tier3_latency_p50": 1.805,
+    "tier3_latency_p99": 2.574,
     "tier3_meets_target": true,
-    "detections": 482,
-    "precision": 88.6,
+    "detections": 9,
+    "precision": 44.4,
     "confusion": {
-      "tp": 427,
-      "fp": 55,
-      "tn": 46238,
-      "fn": 2690
+      "tp": 4,
+      "fp": 5,
+      "tn": 13,
+      "fn": 2
     },
     "tier_distribution": {
-      "tier1_safe": 46312,
-      "tier2_suspicious": 1855,
-      "tier3_fraud": 482,
-      "tier3_likely_fraud": 761
+      "tier1_safe": 0,
+      "tier2_suspicious": 0,
+      "tier3_fraud": 9,
+      "tier3_likely_fraud": 15
     },
-    "filter_rate_tier1": 93.73,
-    "filter_rate_tier12": 97.48
+    "filter_rate_tier1": 0.0,
+    "filter_rate_tier12": 0.0
   },
   "shared_config": {
-    "tier1_threshold": 0.5215483903884888,
-    "warmup_edges": 74115,
-    "eval_edges": 49410,
-    "train_subgraphs": 90,
-    "subgnn_train_time_s": 0.84,
-    "lstm_train_time_s": 13.04,
+    "tier1_threshold": 0.0,
+    "warmup_edges": 36,
+    "eval_edges": 24,
+    "train_subgraphs": 4,
+    "subgnn_train_time_s": 0.03,
+    "lstm_train_time_s": 0.03,
     "period": "dao_hack"
   }
 }
