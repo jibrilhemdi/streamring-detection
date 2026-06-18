@@ -236,7 +236,7 @@ Keep these out of public commits:
 ```bibtex
 @article{streamring2026,
   title={StreamRing: Real-Time Fraud Ring Detection on Ethereum Classic via Cascading Graph Neural Networks},
-  author={},
+  author={Ahmad Zulfan, Ahmad Jibril Hemdi, Kyle Nathan Yahya},
   year={2026}
 }
 ```
