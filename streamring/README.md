@@ -22,7 +22,7 @@ streamring/
 ├── experiments/                      # Reproducible experiment entry points
 ├── tests/                            # Unit and artifact integrity tests
 ├── results/                          # Published JSON, LaTeX, PNG, and PDF outputs
-├── paper/                            # LaTeX paper and references
+├── paper/                            # LaTeX paper and references (private)
 └── data/                             # Ignored raw/processed/graph artifacts
 ```
 
